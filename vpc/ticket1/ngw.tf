@@ -5,7 +5,9 @@ resource "aws_eip" "example" {
 
 
 resource "aws_nat_gateway" "example" {
-  # Your code goes here 
+allocation_id = aws_eip.example.id
+subnet_id    = aws_subnet.private1.id
+
 
 
 
