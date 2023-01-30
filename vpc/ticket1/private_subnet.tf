@@ -1,5 +1,8 @@
 resource "aws_subnet" "private1" {
-  # Your code goes here 
+vpc_id           = aws_vpc.main.id
+cidr_block       = "10.0.4.0/24"
+availability_zone = "eu-west-1a"
+
 
 
 
@@ -12,8 +15,9 @@ resource "aws_subnet" "private1" {
 
 
 resource "aws_subnet" "private2" {
-   # Your code goes here 
-
+vpc_id           = aws_vpc.main.id
+cidr_block       = "10.0.5.0/24"
+availability_zone = "eu-west-1b"
 
 
 
@@ -26,7 +30,10 @@ resource "aws_subnet" "private2" {
 
 
 resource "aws_subnet" "private3" {
-   # Your code goes here 
+vpc_id           = aws_vpc.main.id
+cidr_block       = "10.0.6.0/24"
+availability_zone = "eu-west-1c"
+
 
 
 
